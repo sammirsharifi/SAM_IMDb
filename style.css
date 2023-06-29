@@ -1,0 +1,416 @@
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: cursive;
+    }
+    
+    a {
+    text-decoration: none;
+    }
+    
+    li {
+    list-style: none;
+
+    }
+
+
+
+    .searchBox {
+        position: absolute;
+        top: 1%;
+        left: 9%;
+        transform:  translate(0%,50%);
+        background: #e9c911;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+    
+    }
+    
+    .searchBox:hover > .searchInput {
+        width: 240px;
+        padding: 0 6px;
+    }
+    
+    .searchBox:hover > .searchButton {
+        color: #e9c911;
+    }
+    
+    .searchButton {
+        color: #10100f;
+        border:none;
+        background: #e9c911;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+    
+    .searchInput {
+        border:none;
+        background: none;
+        outline:none;
+        float:right;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+    
+    }
+    
+    @media screen and (max-width: 620px) {
+    .searchBox:hover > .searchInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+    }
+
+
+    .apiBox {
+        position: absolute;
+        top: 6%;
+        right: 4%;
+        transform:  translate(0%,-50%);
+        background: #e9c911;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10px;
+    
+    }
+    
+    .apiBox:hover > .apiInput {
+        width: 240px;
+        padding: 0 6px;
+    }
+    
+    .apiBox:hover > .apiButton {
+        color: #e9c911;
+    }
+    
+    .apiButton {
+        color: #10100f;
+        border:none;
+        background: #e9c911;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
+    
+    .apiInput {
+        border:none;
+        background: none;
+        
+        outline:none;
+        float:right;
+        padding: 0;
+        color: black;
+        font-size: 16px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+    
+    }
+    
+    @media screen and (max-width: 620px) {
+    .apiBox:hover > .apiInput {
+        width: 150px;
+        padding: 0 6px;
+    }
+    }
+
+
+    /* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(11, 11, 11);
+    color: #fff;
+    }
+    
+
+
+    .logo-image{
+
+         width: 100px; 
+         height: 50px; 
+         display: block; 
+         text-indent: -9999px;
+    }
+
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
+.movie-card {
+  font: 14px/22px 'Times New Roman', serif;
+  color: #A9A8A3;
+  padding: 40px 0;
+ 
+  
+}
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+  height:450px;
+  background: #050508e7;
+  border-radius: 5px;
+  position: relative;
+
+
+}
+
+.recommend_container {
+  margin: auto;
+  margin-top: 0.5%;
+  width: 900px;
+  height:400px;
+  background: #050508e7;
+  border-radius: 5px;
+  position: relative;
+
+
+}
+
+.recommend_title{
+  position:absolute;
+  z-index: 1;
+  left:5%;
+  top:5%;
+  font-size: 2.0em;
+  color: #e9c911;
+  
+  
+}
+
+.recommend_film_container{
+  position:relative;
+  top: 15%;
+  width: 100%;
+  height: 80%;
+
+  
+}
+
+.recommend_film{
+
+  position:relative;
+  display: inline-block;
+  margin-right: 2%;
+  z-index: 10;
+  width:22%;
+  height: 100%;
+  left: 2%;
+  background-color:#474644;  
+}
+
+
+.recommend_film_poster_container{
+  position: absolute;
+  width:100%;
+  height: 75%;
+
+
+}
+
+.recommend_film_poster_container img{
+  position:absolute;
+  overflow: hidden;
+  object-fit: cover;
+  width: 100%;
+  height : 100%;
+  top:0; left:0; bottom: 0;right:0%;
+  
+}
+
+.recommend_film_info{
+   position: relative;
+   width: 100%;
+   height: 25%;
+   top:75%;
+}
+
+.recommend_film_info:hover{
+  background-color:#5c4f03;
+  
+}
+.recommend_film_info img{
+  position: absolute;
+  left:5%;top: 10%;
+  width: 15%;height: 20%;
+}
+
+.recommend_film_info span{
+  position: absolute;
+  width:100%;
+  left:20%;top: 10%;
+}
+
+.recommend_film_info_name{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top:50%;left:7%;
+  color:#B1B0AC;
+  font-size:large;
+}
+
+.recommend_film_info_name button{
+  border-radius:50%;
+  right: 5%;
+  z-index: 1;
+
+}
+
+.filmCover {
+  position:absolute;
+  overflow: hidden;
+  top:0; left:0; bottom: 0;right:60%;
+
+    width: auto;
+    height: auto;
+  
+    
+
+}
+
+
+
+.details {
+  
+  position:absolute;
+  top:0;left:40%;bottom:70%;right:0;
+  
+  
+  .title1 {
+    top: 20% ;left: 5% ;right: 25%;;
+    color:orange;
+    font-weight: 900;
+    font-size: 25px;
+    position: relative ;
+    
+  }
+
+  .title2 {  
+    top: 25% ;left: 5%;right:25%;
+    position: relative ;  
+    color: #C7C1BA;
+    font-size: 15px;    
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+
+  .star{
+    position: absolute;
+    top: 15%;right: 5%;
+    width: 100px;
+    height:50px;
+  }
+  .score{
+    position: absolute;
+    top: 27%;right: -2%;
+    width: 100px;
+    height:50px;
+    color:black;
+    font-size: 17px;    
+    font-weight: 750;
+
+  }}
+
+.tags{
+  position:absolute;
+  top:17%;left:40%;bottom:70%;right: 0;
+
+}
+
+.tag {
+  position: relative;  
+  top: 5% ;left: 5%;
+  background: white;
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 14px;
+  margin-right: 4px;
+  line-height: 35px;
+  cursor: pointer;
+  }
+
+.tag:hover {
+    background: #ddd;
+  }
+
+  
+
+
+
+
+.description {
+  position:absolute;
+  overflow-x: hidden;
+  top:25%;left:42%;right:5%;bottom: 20%;
+  font-size: 16px;
+  line-height: 26px;
+  color: #B1B0AC;
+
+  
+}
+hr { 
+  color:white;
+  margin-top:2px;
+  margin-bottom:2px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+
+
+
+.column1 {
+  padding-left: 50px;
+  padding-top: 120px;
+  width: 220px;
+  float: left;
+  text-align: center;
+}
+
+.tag {
+  background: white;
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 14px;
+  margin-right: 4px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: #ddd;
+}
+
+.column2 {
+  padding-left: 41px;
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 480px;
+  float: left;
+}
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="manager.js"></script>  
+  <title>IMDB</title>
+  <style>
+    body {
+      background-image: url('./images/main_page_wallpaper.webp');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    window.onload = function(){
+      search_movie('joker');
+      return false;
+    }
+    </script>
+
+  <nav class="navbar">
+    <!-- LOGO -->
+    <img src="./images/imdb_logo.jpg" class="logo-image">
+
+    <!--search box-->
+      <form   class="searchBox" , onsubmit="search_movie(null);return false;">
+            <input id="search" class="searchInput"type="text" name="" placeholder="Search imdb...">
+            <button class="searchButton">
+                <i class="material-icons">
+                    search
+                </i>
+            </button></form>
+    <!--API key box-->
+
+    <form class="apiBox" onsubmit="set_API_Key();return false;" >
+      <input id="apikey" class="apiInput"type="text"  placeholder="API key....">
+      <button class="apiButton", >
+          <i class="material-icons">
+              API key
+          </i>
+      </button></form>
+</div>
+
+
+    </nav>
+
+    <div class="movie-card">
+  
+      <div class="container">
+        <div class="filmCover"><img id="cover" style="border: none; width: 100%; height: 100%;"></div>
+
+          
+          <div class="details">
+          
+            <div class="title1" > <span id="film_title"></span></div>
+            <div class="title2"> <p id="film_year_mins"></div>
+            <img src="./images/star.jpg" class="star">
+            <div class="score"><span id="score-val"></span></div>  
+            
+          </div> <!-- end details -->
+          <div class="tags" id="tags">
+                         
+          </div>
+
+          <div class="description">
+            <p style="color: aliceblue;" id="descript"></p>
+            <hr>
+            <p style="color: aliceblue;" ><span style="color:#e9c911;">Directores: </span><span id="directors"></span></p>
+            <hr>
+            <p style="color: aliceblue;" ><span style="color:#e9c911;">Writers: </span><span id="writers"></span></p>
+            <hr>
+            <p style="color: aliceblue;" ><span style="color:#e9c911;">Stars: </span><span id="stars"></span></p>
+            <hr>
+            <p style="color:#e9c911;" ><span style="color:#e9c911;">Awards: </span><span id="awards" ></span></p>
+          </div>
+      </div> <!-- end container -->
+      
+      <div class="recommend_container">
+
+        <div><p class ="recommend_title">More like This</p> </div>
+        <div class="recommend_film_container",id="similar_films">
+          
+        </div>
+        </div>
+      </div>
+    </div> <!-- end movie-card -->
+
+
+  
+</body>
+
+</html>
